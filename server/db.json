@@ -1,0 +1,78 @@
+{
+  "shas": {
+    "src": "834d3499021902e5288fa25b84b262d8f5e20be2",
+    "components": "3e9797b4deb8a784f704b58388c62bcbd04e8bb0",
+    "others": "544e2b99468552c0b3d7f3ec0d93e30d824ed2d0",
+    "BoxShadows": "5f56ad35e2117f4263497d272e3318560c9730bf",
+    "vue": "65235bd70bff7845fe7aee8f183c6e0030742dcb",
+    "EmptyWrapper": "ff151a2196fd76b7e0687ab975cea8e62d21050e",
+    "GraphicCard": "2a21965be77f62c7f9256692a31126f01f43ee9f",
+    "List": "6d9a0c41d65d5206a364c434f0f45366ed0da861"
+  },
+  "components": {
+    "vue": [
+      {
+        "name": "EmptyWrapper",
+        "snapshot": "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/EmptyWrapper/snapshot.png",
+        "downloadUrl": [
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/EmptyWrapper/index.vue",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/EmptyWrapper/snapshot.png"
+        ]
+      },
+      {
+        "name": "GraphicCard",
+        "snapshot": "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/GraphicCard/snapshot.png",
+        "downloadUrl": [
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/GraphicCard/GraphicCard.vue",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/GraphicCard/example.vue",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/GraphicCard/main.json",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/GraphicCard/snapshot.png"
+        ]
+      },
+      {
+        "name": "List",
+        "snapshot": "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/List/snapshot.png",
+        "downloadUrl": [
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/List/List.vue",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/List/ListItem.vue",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/List/ListItemMeta.vue",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/List/index.css",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/List/index.less",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/List/main.json",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/vue/List/snapshot.png"
+        ]
+      }
+    ],
+    "react": [],
+    "others": [
+      {
+        "name": "BoxShadows",
+        "snapshot": "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/others/BoxShadows/snapshot.png",
+        "downloadUrl": [
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/others/BoxShadows/index.html",
+          "https://raw.githubusercontent.com/ckangwen/fe-repo/master/src/components/others/BoxShadows/snapshot.png"
+        ]
+      }
+    ]
+  },
+  "pages": {
+    "vue": [],
+    "react": []
+  },
+  "templates": {
+    "vue": [],
+    "react": [],
+    "others": []
+  },
+  "functions": [],
+  "dirNameToUrlMap": {
+    "src": "https://api.github.com/repos/ckangwen/fe-repo/contents/src?ref=master",
+    "components": "https://api.github.com/repos/ckangwen/fe-repo/contents/src/components?ref=master",
+    "others": "https://api.github.com/repos/ckangwen/fe-repo/contents/src/components/others?ref=master",
+    "BoxShadows": "https://api.github.com/repos/ckangwen/fe-repo/contents/src/components/others/BoxShadows?ref=master",
+    "vue": "https://api.github.com/repos/ckangwen/fe-repo/contents/src/components/vue?ref=master",
+    "EmptyWrapper": "https://api.github.com/repos/ckangwen/fe-repo/contents/src/components/vue/EmptyWrapper?ref=master",
+    "GraphicCard": "https://api.github.com/repos/ckangwen/fe-repo/contents/src/components/vue/GraphicCard?ref=master",
+    "List": "https://api.github.com/repos/ckangwen/fe-repo/contents/src/components/vue/List?ref=master"
+  }
+}
