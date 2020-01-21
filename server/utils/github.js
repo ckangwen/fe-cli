@@ -6,9 +6,9 @@ const adapter = new FileSync(path.resolve(__dirname, '../db.json'))
 const db = low(adapter)
 
 const { repoUrl } = require('../config')
+const token = require('../../token')
 const { generateContentPath, everySync } = require('./tools')
 
-const token = 'e295056f28f6f2bc50c2cff7f8ed8bf5ee644731'
 const client = github.client(token)
 
 db.defaults({

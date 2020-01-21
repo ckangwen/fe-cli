@@ -30,7 +30,6 @@ export default {
       category: this.category,
       type: this.type
     }).then(res => {
-      console.log(res)
       this.list = res
     })
     next()
@@ -44,7 +43,6 @@ export default {
   },
   computed: {
     title () {
-      console.log(this.type)
       return ['react', 'vue', 'others'].indexOf(this.type) >= 0 ? (this.type).toUpperCase() : 'All'
     }
   },
@@ -57,7 +55,6 @@ export default {
       category: this.category,
       type: this.type
     }).then(res => {
-      console.log(res)
       this.list = res
     })
   }

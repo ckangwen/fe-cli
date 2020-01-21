@@ -1,4 +1,6 @@
 const fs = require('fs')
+const { red, green } = require('chalk')
+const { mkdirpSync } = require('fs-extra')
 const path = require('path')
 const request = require('request')
 const low = require('lowdb')
@@ -26,12 +28,22 @@ const getFileNameFromUrl = function (url) {
   return urlSplit[urlSplit.length - 1]
 }
 
-const _downloadFile = function (url, exportPath) {
-  request(url, (err, status, body) => {
-    if (err) console.log(err)
-  }).pipe(fs.createWriteStream(path.resolve(exportPath, getFileNameFromUrl(url))))
+const mkdirPar = (name, exportPath) => {
+  const parDir = path.resolve(exportPath, name)
+  if (!fs.existsSync(parDir)) {
+    mkdirpSync(parDir)
+  }
+  return parDir
 }
 
+const _downloadFile = function (url, exportPath) {
+  request(url, (err, status, body) => {
+    if (err) {
+      console.log(red(`${getFileNameFromUrl(url)}拉取失败，请重试`))
+    }
+  }).pipe(fs.createWriteStream(path.resolve(exportPath, getFileNameFromUrl(url))))
+  console.log(green(`${getFileNameFromUrl(url)}拉取成功`))
+}
 /**
  * 文件下载本地
  * @param {*} category 导出的物料的类型 { component | template | page}
@@ -39,12 +51,12 @@ const _downloadFile = function (url, exportPath) {
  * @param {*} exportPath 保存到本地的路径
  */
 const downloadFile = function (category, name, exportPath) {
-  let type = ['vue', 'react', 'others']
-  type.forEach(item => {
+  exportPath = mkdirPar(name, exportPath);
+  ['vue', 'react', 'others'].forEach(item => {
     let content = db.get(category).get(item).find({ name }).value()
     if (content) {
       content.downloadUrl.forEach(link => {
-        if (new RegExp('(js|vue|ts|jsx|tsx|less|css|scss)$').test(link)) {
+        if (new RegExp('(html|css|less|scss|js|vue|ts|jsx|tsx)$').test(link)) {
           _downloadFile(link, exportPath)
         }
       })

@@ -3,10 +3,9 @@ const path = require('path')
 const app = express()
 const bodyParser = require('body-parser')
 
-// const { hasUpdate, getRepoFileStructure } = require('./utils/github')
-
 const api = require('./api')
 
+app.use(express.static(path.resolve(__dirname, '../dist')))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
@@ -24,7 +23,7 @@ app.all('*', function (req, res, next) {
 })
 
 app.get('/', (req, res) => {
-  res.type('html')
+  // res.type('html')
   res.render('index.html')
 })
 

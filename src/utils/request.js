@@ -67,7 +67,6 @@ class HttpRequest {
     })
     options = Object.assign(this.getInsideConfig(), options)
     this.interceptors(instance, options.url)
-    console.log(options)
     return instance(options)
   }
 }
